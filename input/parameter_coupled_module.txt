@@ -1,0 +1,131 @@
+&Calc_settings
+
+growth_calc      = .true.
+jra55_use_switch = 1
+flux_calculation = 0
+n_spe            = 2
+mort_switch      = 1
+plantation_flag  = 0
+rec_ini_year     = 30
+display_flag     = 1
+diurnal_out_flag = 1
+/
+
+&File_names
+
+jra55_timezone = 9
+jra55_lat = 24.48
+Fn_jra55 = './input/Meteorological_data/jra55_out.csv'
+Fn_forest_out          = './output/forest.txt'
+Fn_forest2_out         = './output/forest2.csv'
+Fn_monitor_tree_out    = './output/monitor_tree.csv'
+Fn_monitor_biomass_out = './output/monitor_biomass.csv'
+Fn_monitor_plot_out    = './output/monitor_plot.csv'
+Fn_monitor_diurnal_out = './output/monitor_diurnal.csv'
+Fn_diurnal             = './output/diurnal.csv'
+/
+
+&Atmospheric_parameters
+
+o2air = 210.0d0
+co2air = 410.0d0
+/
+
+&Soil_parameters
+
+ground_elev = 0.2d0
+soilresis   = 500.0d0
+albsoi_vis  = 0.10d0
+albsoi_nir  = 0.20d0
+hksat       = 0.00231d0
+moist       = 0.99d0
+bsw         = 5.3d0
+psisat      = -0.00143d0
+soil_t      = 298.15d0
+sal_ini     = 30.0d0
+din_ini     = 0.200d0
+dip_ini     = 0.0045d0
+/
+
+&Waterflux_parameters
+
+flux_fw = 0.25d0
+din_fw  = 0.15d0
+dip_fw  = 1.0d0
+sal_sw  = 33.0d0
+din_sw  = 0.0005d0
+dip_sw  = 1.0000d0
+/
+
+&PFT_parameters
+
+rhol_vis = 0.28d0, 0.28d0
+rhol_nir = 0.45d0, 0.45d0
+taul_vis = 0.10d0, 0.10d0
+taul_nir = 0.25d0, 0.25d0
+emleaf   = 0.98d0
+xl       = 0.25d0, 0.25d0
+/
+
+&Root_parameters
+
+root_filter     = 0.9d0,      0.99d0
+root_resist     = 30.0d0,     30.0d0
+root_density    = 310000.0d0, 310000.0d0
+root_radius     = 0.00029d0,  0.00029d0
+root_depth      = 1.0d0
+fine_root_ratio = 0.20d0,     0.20d0
+/
+
+&Stem_parameters
+
+k_sap    = 1.44d0,  1.13d0
+p50_sap  = -4.40d0, -8.18d0
+a2_sap   = 4.5d0,   4.6d0
+wood_rho = 0.84d0,  0.76d0
+c_n_leaf = 55.0d0,  55.0d0
+c_n_stem = 327.0d0, 327.0d0
+c_n_root = 120.0d0, 120.0d0
+/
+
+&Leaf_parameters
+
+t_acclim     = 1, 1
+t_growth     = 27.0d0,   27.0d0
+t_home       = 32.0d0,   32.0d0
+optimum_dpai = 0.10d0,   0.10d0
+minlp        = -4.5d0,   -4.0d0
+klp          = -4.0d0,   -3.5d0
+dleaf        = 0.10d0,   0.10d0
+leaf_cp      = 2500.0d0, 2500.0d0
+vcmaxpft     = 50.0d0,   50.0d0
+iota0        = 250.0d0,  250.0d0
+leaf_b0      = -0.40d0,  -0.60d0
+/
+
+&Metabolic_parameters
+
+grow_resp         = 0.25d0,     0.25d0
+main_resp_stem    = 0.000065d0, 0.000065d0
+main_resp_root    = 0.0043d0,   0.0043d0
+root_turn         = 0.0010d0,   0.0010d0
+coarse_root_turn  = 0.0003d0,   0.0003d0
+leaf_turn         = 0.00236d0,  0.00191d0
+leaf_resorp       = 0.85d0,     0.85d0
+stock_trunk_ratio = 0.05d0,     0.05d0
+/
+
+&Allometric_parameters
+
+crown_a      = 0.667d0,  0.667d0
+crown_b      = 14.10d0,  15.698d0
+tree_h_a     = 42.539d0, 33.144d0
+tree_h_b     = 0.6860d0, 0.5051d0
+tree_h_min_a = 12.196d0, 11.721d0
+tree_h_min_b = 0.4595d0, 0.4894d0
+pr_s_a       = -1.757d0, 0.0d0
+pr_s_b       = -3.175d0, 0.0d0
+pr_h_a       = 2.709d0,  0.0d0
+pr_h_b       = 0.503d0,  0.0d0
+pr_d         = 0.032d0,  0.0d0
+/
